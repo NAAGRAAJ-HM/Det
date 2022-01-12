@@ -2,6 +2,6 @@
 
 class_Det Det;
 
-void class_Det::InitFunction(void){
+FUNC(void, DET_CODE) class_Det::InitFunction(void){
 }
 
