@@ -8,15 +8,19 @@
 /*****************************************************/
 #include "Det.h"
 
+#include "Det_EcuM.h"
+
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
+class_Det_EcuM Det_EcuM;
+class_EcuM_Client *EcuM_Client_ptr_Det = &Det_EcuM;
 class_Det Det;
 
 /*****************************************************/
 /* FUNCTIONS                                         */
 /*****************************************************/
-FUNC(void, DET_CODE) class_Det::InitFunction(void){
+FUNC(void, DET_CODE) class_Det_EcuM::InitFunction(void){
 }
 
 FUNC(void, DET_CODE) class_Det::ReportError(void){
