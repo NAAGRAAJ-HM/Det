@@ -9,12 +9,15 @@
 #include "Det.h"
 
 #include "Det_EcuM.h"
+#include "Det_SchM.h"
 
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
 class_Det_EcuM Det_EcuM;
 class_EcuM_Client *EcuM_Client_ptr_Det = &Det_EcuM;
+class_Det_SchM Det_SchM;
+class_SchM_Client *SchM_Client_ptr_Det = &Det_SchM;
 class_Det Det;
 
 /*****************************************************/
