@@ -14,16 +14,17 @@
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
-class_Det_EcuM Det_EcuM;
-class_EcuM_Client *EcuM_Client_ptr_Det = &Det_EcuM;
-class_Det_SchM Det_SchM;
-class_SchM_Client *SchM_Client_ptr_Det = &Det_SchM;
+interface_Det_EcuM_Init Det_EcuM_Init;
+interface_Det_SchM_Main Det_SchM_Main;
 class_Det Det;
+
+interface_EcuM_Init_Client *EcuM_Init_Client_ptr_Det = &Det_EcuM_Init;
+interface_SchM_Main_Client *SchM_Main_Client_ptr_Det = &Det_SchM_Main;
 
 /*****************************************************/
 /* FUNCTIONS                                         */
 /*****************************************************/
-FUNC(void, DET_CODE) class_Det_EcuM::InitFunction(void){
+FUNC(void, DET_CODE) interface_Det_EcuM_Init::InitFunction(void){
 }
 
 FUNC(void, DET_CODE) class_Det::ReportError(void){
