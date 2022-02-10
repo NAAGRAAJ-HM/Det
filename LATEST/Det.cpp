@@ -6,34 +6,52 @@
 /*****************************************************/
 /* #INCLUDES                                         */
 /*****************************************************/
-#include "Det.h"
+#include "module.h"
 
-#include "Det_EcuM.h"
-#include "Det_SchM.h"
+#include "Det_Unused.h"
+
+/*****************************************************/
+/* #DEFINES                                          */
+/*****************************************************/
+
+/*****************************************************/
+/* MACROS                                            */
+/*****************************************************/
+
+/*****************************************************/
+/* TYPEDEFS                                          */
+/*****************************************************/
+class module_Det : public class_module{
+   public:
+      FUNC(void, DET_CODE) InitFunction   (void);
+      FUNC(void, DET_CODE) DeInitFunction (void);
+      FUNC(void, DET_CODE) MainFunction   (void);
+};
 
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
-interface_Det_EcuM_Init Det_EcuM_Init;
-interface_Det_SchM_Main Det_SchM_Main;
-class_Det Det;
+module_Det Det;
 
-interface_EcuM_Init_Client *EcuM_Init_Client_ptr_Det = &Det_EcuM_Init;
-interface_SchM_Main_Client *SchM_Main_Client_ptr_Det = &Det_SchM_Main;
+interface_EcuM_Client *EcuM_Client_ptr_Det = &Det;
+interface_SchM_Client *SchM_Client_ptr_Det = &Det;
 
 /*****************************************************/
 /* FUNCTIONS                                         */
 /*****************************************************/
-FUNC(void, DET_CODE) interface_Det_EcuM_Init::InitFunction(void){
+FUNC(void, DET_CODE) module_Det::InitFunction(void){
 }
 
-FUNC(void, DET_CODE) class_Det::ReportError(void){
+FUNC(void, DET_CODE) module_Det::MainFunction(void){
 }
 
-FUNC(void, DET_CODE) class_Det::Start(void){
+FUNC(void, DET_CODE) class_Det_Unused::ReportError(void){
 }
 
-FUNC(void, DET_CODE) class_Det::GetVersionInfo(void){
+FUNC(void, DET_CODE) class_Det_Unused::Start(void){
+}
+
+FUNC(void, DET_CODE) class_Det_Unused::GetVersionInfo(void){
 }
 
 /*****************************************************/
