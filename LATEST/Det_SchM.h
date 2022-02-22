@@ -22,7 +22,7 @@
 /*****************************************************/
 /* TYPEDEFS                                          */
 /*****************************************************/
-class class_Det_SchM : public class_SchM_Client{
+class interface_Det_SchM : public interface_SchM_Client{
    public:
 /*****************************************************/
 /* FUNCTIONS                                         */
@@ -41,7 +41,7 @@ class class_Det_SchM : public class_SchM_Client{
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
-extern class_SchM_Client *SchM_Client_ptr_Det;
+extern interface_Det_SchM *SchM_Client_ptr_Det;
 
 /*****************************************************/
 /* EOF                                               */
