@@ -27,7 +27,8 @@ class interface_Det_EcuM : public interface_EcuM_Client{
 /*****************************************************/
 /* FUNCTIONS                                         */
 /*****************************************************/
-      FUNC(void, DET_CODE) InitFunction(void);
+      virtual FUNC(void, DET_CODE) InitFunction   (void) = 0;
+      virtual FUNC(void, DET_CODE) DeInitFunction (void) = 0;
 };
 
 /*****************************************************/
