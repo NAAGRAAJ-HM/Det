@@ -24,8 +24,6 @@
 /*****************************************************/
 class module_Det:
       public abstract_module
-   ,  public interface_Det_EcuM
-   ,  public interface_Det_SchM
 {
    public:
       FUNC(void, DET_CODE) InitFunction   (void);
@@ -34,12 +32,19 @@ class module_Det:
 };
 
 /*****************************************************/
+/* CONSTS                                            */
+/*****************************************************/
+
+/*****************************************************/
+/* PARAMS                                            */
+/*****************************************************/
+
+/*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
-module_Det Det;
-
-interface_Det_EcuM *EcuM_Client_ptr_Det = &Det;
-interface_Det_SchM *SchM_Client_ptr_Det = &Det;
+module_Det     Det;
+infEcuMClient* gptrinfEcuMClient_Det = &Det;
+infSchMClient* gptrinfSchMClient_Det = &Det;
 
 /*****************************************************/
 /* FUNCTIONS                                         */
