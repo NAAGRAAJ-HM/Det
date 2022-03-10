@@ -7,8 +7,8 @@
 /* #INCLUDES                                         */
 /*****************************************************/
 #include "module.h"
-#include "Det_EcuM.h"
-#include "Det_SchM.h"
+#include "infDet_EcuM.h"
+#include "infDet_SchM.h"
 #include "Det_Unused.h"
 
 /*****************************************************/
@@ -28,6 +28,7 @@ class module_Det:
    public:
       FUNC(void, DET_CODE) InitFunction   (void);
       FUNC(void, DET_CODE) DeInitFunction (void);
+      FUNC(void, DET_CODE) GetVersionInfo (void);
       FUNC(void, DET_CODE) MainFunction   (void);
 };
 
@@ -44,6 +45,7 @@ class module_Det:
 /*****************************************************/
 module_Det     Det;
 infEcuMClient* gptrinfEcuMClient_Det = &Det;
+infDcmClient*  gptrinfDcmClient_Det  = &Det;
 infSchMClient* gptrinfSchMClient_Det = &Det;
 
 /*****************************************************/
@@ -53,6 +55,9 @@ FUNC(void, DET_CODE) module_Det::InitFunction(void){
 }
 
 FUNC(void, DET_CODE) module_Det::DeInitFunction(void){
+}
+
+FUNC(void, DET_CODE) module_Det::GetVersionInfo(void){
 }
 
 FUNC(void, DET_CODE) module_Det::MainFunction(void){
