@@ -1,6 +1,6 @@
 #pragma once
 /*****************************************************/
-/* File   : Det_SchM.h                               */
+/* File   : infDet_EcuM.h                            */
 /* Author : Naagraaj HM                              */
 /*****************************************************/
 
@@ -32,7 +32,7 @@
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
-extern infSchMClient* gptrinfSchMClient_Det;
+extern infEcuMClient* gptrinfEcuMClient_Det;
 
 /*****************************************************/
 /* FUNCTIONS                                         */

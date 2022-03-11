@@ -1,15 +1,13 @@
+#pragma once
 /*****************************************************/
-/* File   : Det.cpp                                  */
+/* File   : infDet_Dcm.h                             */
 /* Author : Naagraaj HM                              */
 /*****************************************************/
 
 /*****************************************************/
 /* #INCLUDES                                         */
 /*****************************************************/
-#include "module.h"
-#include "infDet_EcuM.h"
-#include "infDet_Dcm.h"
-#include "infDet_SchM.h"
+#include "Compiler_Cfg_Det.h"
 
 /*****************************************************/
 /* #DEFINES                                          */
@@ -22,15 +20,6 @@
 /*****************************************************/
 /* TYPEDEFS                                          */
 /*****************************************************/
-class module_Det:
-      public abstract_module
-{
-   public:
-      FUNC(void, DET_CODE) InitFunction   (void);
-      FUNC(void, DET_CODE) DeInitFunction (void);
-      FUNC(void, DET_CODE) GetVersionInfo (void);
-      FUNC(void, DET_CODE) MainFunction   (void);
-};
 
 /*****************************************************/
 /* CONSTS                                            */
@@ -43,33 +32,11 @@ class module_Det:
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
-module_Det     Det;
-infEcuMClient* gptrinfEcuMClient_Det = &Det;
-infDcmClient*  gptrinfDcmClient_Det  = &Det;
-infSchMClient* gptrinfSchMClient_Det = &Det;
+extern infDcmClient* gptrinfDcmClient_Det;
 
 /*****************************************************/
 /* FUNCTIONS                                         */
 /*****************************************************/
-FUNC(void, DET_CODE) module_Det::InitFunction(void){
-}
-
-FUNC(void, DET_CODE) module_Det::DeInitFunction(void){
-}
-
-FUNC(void, DET_CODE) module_Det::GetVersionInfo(void){
-}
-
-FUNC(void, DET_CODE) module_Det::MainFunction(void){
-}
-
-#include "Det_Unused.h"
-
-FUNC(void, DET_CODE) class_Det_Unused::ReportError(void){
-}
-
-FUNC(void, DET_CODE) class_Det_Unused::Start(void){
-}
 
 /*****************************************************/
 /* EOF                                               */
