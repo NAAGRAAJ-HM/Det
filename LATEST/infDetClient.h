@@ -1,6 +1,6 @@
 #pragma once
 /******************************************************************************/
-/* File   : infDet_Version.h                                                  */
+/* File   : infDetClient.h                                                    */
 /* Author : NAGARAJA HM (c) since 1982. All rights reserved.                  */
 /******************************************************************************/
 
@@ -11,19 +11,11 @@
 /******************************************************************************/
 /* #DEFINES                                                                   */
 /******************************************************************************/
-#define DET_AR_RELEASE_MAJOR_VERSION                                           4
-#define DET_AR_RELEASE_MINOR_VERSION                                           3
+#define Det_DevErrorDetect                                                STD_ON
 
 /******************************************************************************/
 /* MACROS                                                                     */
 /******************************************************************************/
-#if(DET_AR_RELEASE_MAJOR_VERSION != STD_AR_RELEASE_MAJOR_VERSION)
-   #error "Incompatible DET_AR_RELEASE_MAJOR_VERSION!"
-#endif
-
-#if(DET_AR_RELEASE_MINOR_VERSION != STD_AR_RELEASE_MINOR_VERSION)
-   #error "Incompatible DET_AR_RELEASE_MINOR_VERSION!"
-#endif
 
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
