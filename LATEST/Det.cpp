@@ -7,7 +7,7 @@
 /* #INCLUDES                                                                  */
 /******************************************************************************/
 #include "module.h"
-#include "infDet_Version.h"
+#include "Det_Cfg.h"
 #include "infDet_EcuM.h"
 #include "infDet_Dcm.h"
 #include "infDet_SchM.h"
@@ -15,10 +15,19 @@
 /******************************************************************************/
 /* #DEFINES                                                                   */
 /******************************************************************************/
+#define DET_AR_RELEASE_MAJOR_VERSION                                           4
+#define DET_AR_RELEASE_MINOR_VERSION                                           3
 
 /******************************************************************************/
 /* MACROS                                                                     */
 /******************************************************************************/
+#if(DET_AR_RELEASE_MAJOR_VERSION != STD_AR_RELEASE_MAJOR_VERSION)
+   #error "Incompatible DET_AR_RELEASE_MAJOR_VERSION!"
+#endif
+
+#if(DET_AR_RELEASE_MINOR_VERSION != STD_AR_RELEASE_MINOR_VERSION)
+   #error "Incompatible DET_AR_RELEASE_MINOR_VERSION!"
+#endif
 
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
@@ -61,6 +70,11 @@ FUNC(void, DET_CODE) module_Det::DeInitFunction(void){
 }
 
 FUNC(void, DET_CODE) module_Det::GetVersionInfo(void){
+#if(STD_ON == Det_DevErrorDetect)
+//TBD: API parameter check
+   Det_ReportError(
+   );
+#endif
 }
 
 FUNC(void, DET_CODE) module_Det::MainFunction(void){
