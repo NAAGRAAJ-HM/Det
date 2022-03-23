@@ -40,6 +40,16 @@ class module_Det:
       FUNC(void, DET_CODE) DeInitFunction (void);
       FUNC(void, DET_CODE) GetVersionInfo (void);
       FUNC(void, DET_CODE) MainFunction   (void);
+
+   private:
+      CONST(Std_TypeVersionInfo, DET_CONST) VersionInfo = {
+            0x0000
+         ,  0xFFFF
+         ,  0x01
+         ,  '0'
+         ,  '1'
+         ,  '0'
+      };
 };
 
 /******************************************************************************/
@@ -86,6 +96,15 @@ FUNC(void, DET_CODE) class_Det_Unused::ReportError(void){
 }
 
 FUNC(void, DET_CODE) class_Det_Unused::Start(void){
+}
+
+void Det_ReportError(void){
+}
+
+void Det_ReportRuntimeError(void){
+}
+
+void Det_ReportTransientFault(void){
 }
 
 /******************************************************************************/
