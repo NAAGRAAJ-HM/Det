@@ -7,7 +7,7 @@
 /* #INCLUDES                                                                  */
 /******************************************************************************/
 #include "module.h"
-#include "Det_Cfg.h"
+#include "CfgDet.h"
 #include "infDet_EcuM.h"
 #include "infDet_Dcm.h"
 #include "infDet_SchM.h"
