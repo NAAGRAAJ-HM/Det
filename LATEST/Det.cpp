@@ -6,11 +6,11 @@
 /******************************************************************************/
 /* #INCLUDES                                                                  */
 /******************************************************************************/
-#include "module.h"
-#include "CfgDet.h"
-#include "infDet_EcuM.h"
-#include "infDet_Dcm.h"
-#include "infDet_SchM.h"
+#include "module.hpp"
+#include "CfgDet.hpp"
+#include "infDet_EcuM.hpp"
+#include "infDet_Dcm.hpp"
+#include "infDet_SchM.hpp"
 
 /******************************************************************************/
 /* #DEFINES                                                                   */
@@ -90,7 +90,7 @@ FUNC(void, DET_CODE) module_Det::GetVersionInfo(void){
 FUNC(void, DET_CODE) module_Det::MainFunction(void){
 }
 
-#include "Det_Unused.h"
+#include "Det_Unused.hpp"
 
 FUNC(void, DET_CODE) class_Det_Unused::ReportError(void){
 }
