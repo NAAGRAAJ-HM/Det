@@ -90,14 +90,6 @@ FUNC(void, DET_CODE) module_Det::GetVersionInfo(void){
 FUNC(void, DET_CODE) module_Det::MainFunction(void){
 }
 
-#include "Det_Unused.hpp"
-
-FUNC(void, DET_CODE) class_Det_Unused::ReportError(void){
-}
-
-FUNC(void, DET_CODE) class_Det_Unused::Start(void){
-}
-
 void Det_ReportError(void){
 }
 
@@ -105,6 +97,18 @@ void Det_ReportRuntimeError(void){
 }
 
 void Det_ReportTransientFault(void){
+}
+
+class class_Det_Unused{
+   public:
+      FUNC(void, DET_CODE) ReportError    (void);
+      FUNC(void, DET_CODE) Start          (void);
+};
+
+FUNC(void, DET_CODE) class_Det_Unused::ReportError(void){
+}
+
+FUNC(void, DET_CODE) class_Det_Unused::Start(void){
 }
 
 /******************************************************************************/
