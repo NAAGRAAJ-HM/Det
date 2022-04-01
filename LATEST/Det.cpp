@@ -78,6 +78,7 @@ VAR(module_Det, DET_VAR) Det(
 FUNC(void, DET_CODE) module_Det::InitFunction(
    CONSTP2CONST(CfgModule_TypeAbstract, DET_CONFIG_DATA, DET_APPL_CONST) lptrCfgModule
 ){
+#if(STD_ON == Det_InitCheck)
    if(E_OK == IsInitDone){
 #if(STD_ON == Det_DevErrorDetect)
       Det_ReportError(
@@ -85,6 +86,7 @@ FUNC(void, DET_CODE) module_Det::InitFunction(
 #endif
    }
    else{
+#endif
       if(NULL_PTR == lptrCfgModule){
 #if(STD_ON == Det_DevErrorDetect)
          Det_ReportError(
@@ -96,10 +98,13 @@ FUNC(void, DET_CODE) module_Det::InitFunction(
 // use PBcfg_Det as back-up configuration
       }
       IsInitDone = E_OK;
+#if(STD_ON == Det_InitCheck)
    }
+#endif
 }
 
 FUNC(void, DET_CODE) module_Det::DeInitFunction(void){
+#if(STD_ON == Det_InitCheck)
    if(E_OK != IsInitDone){
 #if(STD_ON == Det_DevErrorDetect)
       Det_ReportError(
@@ -107,11 +112,26 @@ FUNC(void, DET_CODE) module_Det::DeInitFunction(void){
 #endif
    }
    else{
+#endif
       IsInitDone = E_NOT_OK;
+#if(STD_ON == Det_InitCheck)
    }
+#endif
 }
 
 FUNC(void, DET_CODE) module_Det::MainFunction(void){
+#if(STD_ON == Det_InitCheck)
+   if(E_OK != IsInitDone){
+#if(STD_ON == Det_DevErrorDetect)
+      Det_ReportError(
+      );
+#endif
+   }
+   else{
+#endif
+#if(STD_ON == Det_InitCheck)
+   }
+#endif
 }
 
 void Det_ReportError(void){
