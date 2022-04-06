@@ -14,18 +14,18 @@
 /******************************************************************************/
 /* #DEFINES                                                                   */
 /******************************************************************************/
-#define DET_AR_RELEASE_MAJOR_VERSION                                           4
-#define DET_AR_RELEASE_MINOR_VERSION                                           3
+#define DET_AR_RELEASE_VERSION_MAJOR                                           4
+#define DET_AR_RELEASE_VERSION_MINOR                                           3
 
 /******************************************************************************/
 /* MACROS                                                                     */
 /******************************************************************************/
-#if(DET_AR_RELEASE_MAJOR_VERSION != STD_AR_RELEASE_MAJOR_VERSION)
-   #error "Incompatible DET_AR_RELEASE_MAJOR_VERSION!"
+#if(DET_AR_RELEASE_VERSION_MAJOR != STD_AR_RELEASE_VERSION_MAJOR)
+   #error "Incompatible DET_AR_RELEASE_VERSION_MAJOR!"
 #endif
 
-#if(DET_AR_RELEASE_MINOR_VERSION != STD_AR_RELEASE_MINOR_VERSION)
-   #error "Incompatible DET_AR_RELEASE_MINOR_VERSION!"
+#if(DET_AR_RELEASE_VERSION_MINOR != STD_AR_RELEASE_VERSION_MINOR)
+   #error "Incompatible DET_AR_RELEASE_VERSION_MINOR!"
 #endif
 
 /******************************************************************************/
@@ -63,8 +63,10 @@ CONSTP2VAR(infSchMClient, DET_VAR, DET_CONST) gptrinfSchMClient_Det = &Det;
 /******************************************************************************/
 VAR(module_Det, DET_VAR) Det(
    {
-         0x0000
-      ,  0xFFFF
+         DET_AR_RELEASE_VERSION_MAJOR
+      ,  DET_AR_RELEASE_VERSION_MINOR
+      ,  0x00
+      ,  0xFF
       ,  0x01
       ,  '0'
       ,  '1'
