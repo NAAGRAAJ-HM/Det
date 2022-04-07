@@ -101,8 +101,8 @@ FUNC(void, DET_CODE) module_Det::InitFunction(
             lptrCfg = lptrCfgModule;
          }
          else{
-// use PBcfg_CanIf as back-up configuration
-            lptrCfg = PBcfg_CanIf;
+// use PBcfgCanIf as back-up configuration
+            lptrCfg = &PBcfgDet;
          }
       }
       IsInitDone = E_OK;
