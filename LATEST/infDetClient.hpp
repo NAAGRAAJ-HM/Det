@@ -36,7 +36,12 @@
 /******************************************************************************/
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
-extern void Det_ReportError(void); //TBD: API parameters
+extern Std_TypeReturn Det_ReportError(
+      uint16 IdModule
+   ,  uint8  IdInstance
+   ,  uint8  IdApi
+   ,  uint8  IdError
+);
 
 /******************************************************************************/
 /* EOF                                                                        */

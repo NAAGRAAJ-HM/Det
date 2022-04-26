@@ -31,8 +31,20 @@
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
+class class_Det_Functionality{
+   public:
+      FUNC(void, DET_CODE) ReportError(
+            uint16 IdModule
+         ,  uint8  IdInstance
+         ,  uint8  IdApi
+         ,  uint8  IdError
+      );
+      FUNC(void, DET_CODE) Start          (void);
+};
+
 class module_Det:
       public abstract_module
+   ,  public class_Det_Functionality
 {
    public:
       module_Det(Std_TypeVersionInfo lVersionInfo) : abstract_module(lVersionInfo){
@@ -84,6 +96,10 @@ FUNC(void, DET_CODE) module_Det::InitFunction(
    if(E_OK == IsInitDone){
 #if(STD_ON == Det_DevErrorDetect)
       Det_ReportError(
+      0 //TBD: IdModule
+   ,  0 //TBD: IdInstance
+   ,  0 //TBD: IdApi
+   ,  0 //TBD: IdError
       );
 #endif
    }
@@ -92,6 +108,10 @@ FUNC(void, DET_CODE) module_Det::InitFunction(
       if(NULL_PTR == lptrCfgModule){
 #if(STD_ON == Det_DevErrorDetect)
          Det_ReportError(
+      0 //TBD: IdModule
+   ,  0 //TBD: IdInstance
+   ,  0 //TBD: IdApi
+   ,  0 //TBD: IdError
          );
 #endif
       }
@@ -116,6 +136,10 @@ FUNC(void, DET_CODE) module_Det::DeInitFunction(void){
    if(E_OK != IsInitDone){
 #if(STD_ON == Det_DevErrorDetect)
       Det_ReportError(
+      0 //TBD: IdModule
+   ,  0 //TBD: IdInstance
+   ,  0 //TBD: IdApi
+   ,  0 //TBD: IdError
       );
 #endif
    }
@@ -132,6 +156,10 @@ FUNC(void, DET_CODE) module_Det::MainFunction(void){
    if(E_OK != IsInitDone){
 #if(STD_ON == Det_DevErrorDetect)
       Det_ReportError(
+      0 //TBD: IdModule
+   ,  0 //TBD: IdInstance
+   ,  0 //TBD: IdApi
+   ,  0 //TBD: IdError
       );
 #endif
    }
@@ -143,6 +171,10 @@ FUNC(void, DET_CODE) module_Det::MainFunction(void){
 }
 
 void Det_ReportError(void){
+      0 //TBD: IdModule
+   ,  0 //TBD: IdInstance
+   ,  0 //TBD: IdApi
+   ,  0 //TBD: IdError
 }
 
 void Det_ReportRuntimeError(void){
@@ -151,16 +183,15 @@ void Det_ReportRuntimeError(void){
 void Det_ReportTransientFault(void){
 }
 
-class class_Det_Unused{
-   public:
-      FUNC(void, DET_CODE) ReportError    (void);
-      FUNC(void, DET_CODE) Start          (void);
-};
-
-FUNC(void, DET_CODE) class_Det_Unused::ReportError(void){
+FUNC(void, DET_CODE) class_Det_Functionality::ReportError(
+      uint16 IdModule
+   ,  uint8  IdInstance
+   ,  uint8  IdApi
+   ,  uint8  IdError
+){
 }
 
-FUNC(void, DET_CODE) class_Det_Unused::Start(void){
+FUNC(void, DET_CODE) class_Det_Functionality::Start(void){
 }
 
 /******************************************************************************/
