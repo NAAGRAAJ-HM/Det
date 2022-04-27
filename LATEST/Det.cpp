@@ -31,19 +31,9 @@
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
-class class_Det_Functionality{
-   public:
-      FUNC(void, DET_CODE) ReportError(
-            uint16 IdModule
-         ,  uint8  IdInstance
-         ,  uint8  IdApi
-         ,  uint8  IdError
-      );
-      FUNC(void, DET_CODE) Start          (void);
-};
-
 class module_Det:
       public abstract_module
+   ,  public infDetClient
    ,  public class_Det_Functionality
 {
    public:
@@ -54,6 +44,13 @@ class module_Det:
       );
       FUNC(void, DET_CODE) DeInitFunction (void);
       FUNC(void, DET_CODE) MainFunction   (void);
+
+      FUNC(Std_TypeReturn, DET_CODE) ReportError(
+            uint16 IdModule
+         ,  uint8  IdInstance
+         ,  uint8  IdApi
+         ,  uint8  IdError
+      );
 };
 
 extern VAR(module_Det, DET_VAR) Det;
@@ -64,6 +61,7 @@ extern VAR(module_Det, DET_VAR) Det;
 CONSTP2VAR(infEcuMClient, DET_VAR, DET_CONST) gptrinfEcuMClient_Det = &Det;
 CONSTP2VAR(infDcmClient,  DET_VAR, DET_CONST) gptrinfDcmClient_Det  = &Det;
 CONSTP2VAR(infSchMClient, DET_VAR, DET_CONST) gptrinfSchMClient_Det = &Det;
+CONSTP2VAR(infDetClient,  DET_VAR, DET_CONST) gptrDet               = &Det;
 
 /******************************************************************************/
 /* PARAMS                                                                     */
@@ -170,25 +168,33 @@ FUNC(void, DET_CODE) module_Det::MainFunction(void){
 #endif
 }
 
-void Det_ReportError(void){
-      0 //TBD: IdModule
-   ,  0 //TBD: IdInstance
-   ,  0 //TBD: IdApi
-   ,  0 //TBD: IdError
+#if(STD_ON == _ReSIM)
+#include <iostream>
+using namespace std;
+#else
+#endif
+
+FUNC(Std_TypeReturn, DET_CODE) module_Det::ReportError(
+      uint16 IdModule
+   ,  uint8  IdInstance
+   ,  uint8  IdApi
+   ,  uint8  IdError
+){
+#if(STD_ON == _ReSIM)
+   cout<<endl<<"Development error reported";
+   cout<<endl<<"IdModule   = "<<IdModule;
+   cout<<endl<<"IdInstance = "<<IdInstance;
+   cout<<endl<<"IdApi      = "<<IdApi;
+   cout<<endl<<"IdError    = "<<IdError;
+#else
+#endif
+   return E_OK;
 }
 
 void Det_ReportRuntimeError(void){
 }
 
 void Det_ReportTransientFault(void){
-}
-
-FUNC(void, DET_CODE) class_Det_Functionality::ReportError(
-      uint16 IdModule
-   ,  uint8  IdInstance
-   ,  uint8  IdApi
-   ,  uint8  IdError
-){
 }
 
 FUNC(void, DET_CODE) class_Det_Functionality::Start(void){
