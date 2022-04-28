@@ -7,6 +7,7 @@
 /* #INCLUDES                                                                  */
 /******************************************************************************/
 #include "Module.hpp"
+#include "Det_core.hpp"
 #include "infDet_EcuM.hpp"
 #include "infDet_Dcm.hpp"
 #include "infDet_SchM.hpp"
