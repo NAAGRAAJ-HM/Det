@@ -7,10 +7,9 @@
 /* #INCLUDES                                                                  */
 /******************************************************************************/
 #include "Module.hpp"
+#include "CfgDet.hpp"
 #include "Det_core.hpp"
-#include "infDet_EcuM.hpp"
-#include "infDet_Dcm.hpp"
-#include "infDet_SchM.hpp"
+#include "infDet.hpp"
 
 /******************************************************************************/
 /* #DEFINES                                                                   */
@@ -45,6 +44,7 @@ class module_Det:
       );
       FUNC(void, DET_CODE) DeInitFunction (void);
       FUNC(void, DET_CODE) MainFunction   (void);
+      DET_CORE_FUNCTIONALITIES
 
       FUNC(Std_TypeReturn, DET_CODE) ReportError(
             uint16 IdModule
@@ -67,7 +67,6 @@ CONSTP2VAR(infDetClient,  DET_VAR, DET_CONST) gptrDet               = &Det;
 /******************************************************************************/
 /* PARAMS                                                                     */
 /******************************************************************************/
-#include "CfgDet.hpp"
 
 /******************************************************************************/
 /* OBJECTS                                                                    */
