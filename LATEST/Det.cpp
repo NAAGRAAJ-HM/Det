@@ -197,7 +197,7 @@ void Det_ReportRuntimeError(void){
 void Det_ReportTransientFault(void){
 }
 
-FUNC(void, DET_CODE) class_Det_Functionality::Start(void){
+FUNC(void, DET_CODE) module_Det::Start(void){
 }
 
 /******************************************************************************/
