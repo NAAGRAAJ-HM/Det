@@ -122,7 +122,7 @@ FUNC(void, DET_CODE) module_Det::InitFunction(
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  0 //TBD: IdError
+         ,  DET_E_UNINIT
       );
 #endif
    }
@@ -142,7 +142,7 @@ FUNC(void, DET_CODE) module_Det::DeInitFunction(void){
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  0 //TBD: IdError
+         ,  DET_E_UNINIT
       );
 #endif
    }
@@ -161,7 +161,7 @@ FUNC(void, DET_CODE) module_Det::MainFunction(void){
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  0 //TBD: IdError
+         ,  DET_E_UNINIT
       );
 #endif
    }
