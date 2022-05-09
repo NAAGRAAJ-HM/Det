@@ -36,6 +36,13 @@ class module_Det:
    ,  public infDetClient
    ,  public class_Det_Functionality
 {
+   private:
+/******************************************************************************/
+/* OBJECTS                                                                    */
+/******************************************************************************/
+            Std_TypeReturn          IsInitDone{E_NOT_OK};
+      const CfgModule_TypeAbstract* lptrCfg{(CfgModule_TypeAbstract*)NULL_PTR};
+
    public:
       module_Det(Std_TypeVersionInfo lVersionInfo) : abstract_module(lVersionInfo){
       }
