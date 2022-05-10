@@ -98,7 +98,10 @@ FUNC(void, DET_CODE) module_Det::InitFunction(
    CONSTP2CONST(CfgModule_TypeAbstract, DET_CONFIG_DATA, DET_APPL_CONST) lptrCfgModule
 ){
 #if(STD_ON == Det_InitCheck)
-   if(E_OK != IsInitDone){
+   if(
+         E_OK
+      != IsInitDone
+   ){
 #endif
       if(NULL_PTR != lptrCfgModule){
          if(STD_HIGH){
@@ -136,7 +139,10 @@ FUNC(void, DET_CODE) module_Det::InitFunction(
 
 FUNC(void, DET_CODE) module_Det::DeInitFunction(void){
 #if(STD_ON == Det_InitCheck)
-   if(E_OK == IsInitDone){
+   if(
+         E_OK
+      == IsInitDone
+   ){
 #endif
 #if(STD_ON == Det_InitCheck)
       IsInitDone = E_NOT_OK;
@@ -156,7 +162,10 @@ FUNC(void, DET_CODE) module_Det::DeInitFunction(void){
 
 FUNC(void, DET_CODE) module_Det::MainFunction(void){
 #if(STD_ON == Det_InitCheck)
-   if(E_OK == IsInitDone){
+   if(
+         E_OK
+      == IsInitDone
+   ){
 #endif
 #if(STD_ON == Det_InitCheck)
    }
