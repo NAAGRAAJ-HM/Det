@@ -9,7 +9,7 @@
 #include "Module.hpp"
 #include "CfgDet.hpp"
 #include "Det_core.hpp"
-#include "infDet.hpp"
+#include "infDet_Exp.hpp"
 
 /******************************************************************************/
 /* #DEFINES                                                                   */
@@ -32,6 +32,7 @@
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
 class module_Det:
+   INTERFACES_EXPORTED_DET
       public abstract_module
    ,  public infDetClient
    ,  public class_Det_Functionality
