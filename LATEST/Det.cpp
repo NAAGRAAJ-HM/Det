@@ -10,6 +10,7 @@
 #include "CfgDet.hpp"
 #include "Det_core.hpp"
 #include "infDet_Exp.hpp"
+#include "infDet_Imp.hpp"
 
 /******************************************************************************/
 /* #DEFINES                                                                   */
