@@ -82,10 +82,6 @@ CONSTP2VAR(infDetClient,  DET_VAR, DET_CONST) gptrDet               = &Det;
 /******************************************************************************/
 VAR(module_Det, DET_VAR) Det(
    {
-#if(STD_ON == _ReSIM)
-         "Det",
-#else
-#endif
          DET_AR_RELEASE_VERSION_MAJOR
       ,  DET_AR_RELEASE_VERSION_MINOR
       ,  0x00
