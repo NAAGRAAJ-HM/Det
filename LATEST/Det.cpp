@@ -139,7 +139,9 @@ FUNC(void, DET_CODE) module_Det::InitFunction(
 #endif
 }
 
-FUNC(void, DET_CODE) module_Det::DeInitFunction(void){
+FUNC(void, DET_CODE) module_Det::DeInitFunction(
+   void
+){
 #if(STD_ON == Det_InitCheck)
    if(
          E_OK
@@ -162,7 +164,9 @@ FUNC(void, DET_CODE) module_Det::DeInitFunction(void){
 #endif
 }
 
-FUNC(void, DET_CODE) module_Det::MainFunction(void){
+FUNC(void, DET_CODE) module_Det::MainFunction(
+   void
+){
 #if(STD_ON == Det_InitCheck)
    if(
          E_OK
@@ -207,13 +211,19 @@ FUNC(Std_TypeReturn, DET_CODE) module_Det::ReportError(
    return E_OK;
 }
 
-void Det_ReportRuntimeError(void){
+void Det_ReportRuntimeError(
+   void
+){
 }
 
-void Det_ReportTransientFault(void){
+void Det_ReportTransientFault(
+   void
+){
 }
 
-FUNC(void, DET_CODE) module_Det::Start(void){
+FUNC(void, DET_CODE) module_Det::Start(
+   void
+){
 }
 
 /******************************************************************************/
