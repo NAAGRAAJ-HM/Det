@@ -91,12 +91,7 @@ FUNC(void, DET_CODE) module_Det::InitFunction(
    ){
 #endif
       if(NULL_PTR != lptrCfgModule){
-         if(STD_HIGH){
-            lptrCfg = lptrCfgModule;
-         }
-         else{
-            lptrCfg = &PBcfgDet;
-         }
+         lptrCfg = lptrCfgModule;
       }
       else{
 #if(STD_ON == Det_DevErrorDetect)
