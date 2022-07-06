@@ -7,9 +7,7 @@
 /* #INCLUDES                                                                  */
 /******************************************************************************/
 #include "Module.hpp"
-#include "CfgDet.hpp"
-#include "Det_core.hpp"
-#include "infDet_Exp.hpp"
+#include "Det.hpp"
 #include "infDet_Imp.hpp"
 
 /******************************************************************************/
@@ -32,34 +30,6 @@
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
-class module_Det:
-      INTERFACES_EXPORTED_DET
-      public abstract_module
-   ,  public infDetClient
-   ,  public class_Det_Functionality
-{
-   private:
-/******************************************************************************/
-/* OBJECTS                                                                    */
-/******************************************************************************/
-
-   public:
-      FUNC(void, DET_CODE) InitFunction(
-         CONSTP2CONST(CfgModule_TypeAbstract, DET_CONFIG_DATA, DET_APPL_CONST) lptrCfgModule
-      );
-      FUNC(void, DET_CODE) DeInitFunction (void);
-      FUNC(void, DET_CODE) MainFunction   (void);
-      DET_CORE_FUNCTIONALITIES
-
-      FUNC(Std_TypeReturn, DET_CODE) ReportError(
-            uint16 IdModule
-         ,  uint8  IdInstance
-         ,  uint8  IdApi
-         ,  uint8  IdError
-      );
-};
-
-extern VAR(module_Det, DET_VAR) Det;
 
 /******************************************************************************/
 /* CONSTS                                                                     */
