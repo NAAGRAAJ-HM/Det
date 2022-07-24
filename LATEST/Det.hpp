@@ -7,6 +7,7 @@
 /******************************************************************************/
 /* #INCLUDES                                                                  */
 /******************************************************************************/
+#include "ConstDet.hpp"
 #include "CfgDet.hpp"
 #include "Det_core.hpp"
 #include "infDet_Exp.hpp"
@@ -32,13 +33,15 @@ class module_Det:
 /******************************************************************************/
 /* OBJECTS                                                                    */
 /******************************************************************************/
+      const ConstDet_Type* lptrConst = (ConstDet_Type*)NULL_PTR;
 
 /******************************************************************************/
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
    public:
       FUNC(void, DET_CODE) InitFunction(
-         CONSTP2CONST(CfgModule_TypeAbstract, DET_CONFIG_DATA, DET_APPL_CONST) lptrCfgModule
+            CONSTP2CONST(ConstModule_TypeAbstract, DET_CONST,       DET_APPL_CONST) lptrConstModule
+         ,  CONSTP2CONST(CfgModule_TypeAbstract,   DET_CONFIG_DATA, DET_APPL_CONST) lptrCfgModule
       );
       FUNC(void, DET_CODE) DeInitFunction (void);
       FUNC(void, DET_CODE) MainFunction   (void);

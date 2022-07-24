@@ -49,7 +49,8 @@ VAR(module_Det, DET_VAR) Det;
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
 FUNC(void, DET_CODE) module_Det::InitFunction(
-   CONSTP2CONST(CfgModule_TypeAbstract, DET_CONFIG_DATA, DET_APPL_CONST) lptrCfgModule
+      CONSTP2CONST(ConstModule_TypeAbstract, DET_CONST,       DET_APPL_CONST) lptrConstModule
+   ,  CONSTP2CONST(CfgModule_TypeAbstract,   DET_CONFIG_DATA, DET_APPL_CONST) lptrCfgModule
 ){
 #if(STD_ON == Det_InitCheck)
    if(
@@ -57,8 +58,12 @@ FUNC(void, DET_CODE) module_Det::InitFunction(
       != IsInitDone
    ){
 #endif
-      if(NULL_PTR != lptrCfgModule){
-         lptrCfg = lptrCfgModule;
+      if(
+            (NULL_PTR != lptrConstModule)
+         && (NULL_PTR != lptrCfgModule)
+      ){
+         lptrConst = lptrConstModule;
+         lptrCfg   = lptrCfgModule;
       }
       else{
 #if(STD_ON == Det_DevErrorDetect)
