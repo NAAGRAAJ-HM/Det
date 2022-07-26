@@ -62,7 +62,7 @@ FUNC(void, DET_CODE) module_Det::InitFunction(
             (NULL_PTR != lptrConstModule)
          && (NULL_PTR != lptrCfgModule)
       ){
-         lptrConst = lptrConstModule;
+         lptrConst = (const ConstDet_Type*)lptrConstModule;
          lptrCfg   = lptrCfgModule;
       }
       else{
