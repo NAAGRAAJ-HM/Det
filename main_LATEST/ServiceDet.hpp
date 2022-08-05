@@ -24,7 +24,7 @@
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
 class module_ServiceDet:
-      INTERFACES_EXPORTED_DET
+      INTERFACES_EXMCALPORTED_SERVICEDET
       public abstract_module
    ,  public infServiceDetClient
    ,  public class_ServiceDet_Functionality
@@ -39,15 +39,15 @@ class module_ServiceDet:
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
    public:
-      FUNC(void, DET_CODE) InitFunction(
-            CONSTP2CONST(ConstModule_TypeAbstract, DET_CONST,       DET_APPL_CONST) lptrConstModule
-         ,  CONSTP2CONST(CfgModule_TypeAbstract,   DET_CONFIG_DATA, DET_APPL_CONST) lptrCfgModule
+      FUNC(void, SERVICEDET_CODE) InitFunction(
+            CONSTP2CONST(ConstModule_TypeAbstract, SERVICEDET_CONST,       SERVICEDET_APPL_CONST) lptrConstModule
+         ,  CONSTP2CONST(CfgModule_TypeAbstract,   SERVICEDET_CONFIG_DATA, SERVICEDET_APPL_CONST) lptrCfgModule
       );
-      FUNC(void, DET_CODE) DeInitFunction (void);
-      FUNC(void, DET_CODE) MainFunction   (void);
-      DET_CORE_FUNCTIONALITIES
+      FUNC(void, SERVICEDET_CODE) DeInitFunction (void);
+      FUNC(void, SERVICEDET_CODE) MainFunction   (void);
+      SERVICEDET_CORE_FUNCTIONALITIES
 
-      FUNC(Std_TypeReturn, DET_CODE) ReportError(
+      FUNC(Std_TypeReturn, SERVICEDET_CODE) ReportError(
             uint16 IdModule
          ,  uint8  IdInstance
          ,  uint8  IdApi
@@ -66,7 +66,7 @@ class module_ServiceDet:
 /******************************************************************************/
 /* OBJECTS                                                                    */
 /******************************************************************************/
-extern VAR(module_ServiceDet, DET_VAR) ServiceDet;
+extern VAR(module_ServiceDet, SERVICEDET_VAR) ServiceDet;
 
 /******************************************************************************/
 /* EOF                                                                        */

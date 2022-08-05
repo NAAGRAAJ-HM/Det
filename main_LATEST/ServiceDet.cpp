@@ -13,18 +13,18 @@
 /******************************************************************************/
 /* #DEFINES                                                                   */
 /******************************************************************************/
-#define DET_AR_RELEASE_VERSION_MAJOR                                           4
-#define DET_AR_RELEASE_VERSION_MINOR                                           3
+#define SERVICEDET_AR_RELEASE_VERSION_MAJOR                                           4
+#define SERVICEDET_AR_RELEASE_VERSION_MINOR                                           3
 
 /******************************************************************************/
 /* MACROS                                                                     */
 /******************************************************************************/
-#if(DET_AR_RELEASE_VERSION_MAJOR != STD_AR_RELEASE_VERSION_MAJOR)
-   #error "Incompatible DET_AR_RELEASE_VERSION_MAJOR!"
+#if(SERVICEDET_AR_RELEASE_VERSION_MAJOR != STD_AR_RELEASE_VERSION_MAJOR)
+   #error "Incompatible SERVICEDET_AR_RELEASE_VERSION_MAJOR!"
 #endif
 
-#if(DET_AR_RELEASE_VERSION_MINOR != STD_AR_RELEASE_VERSION_MINOR)
-   #error "Incompatible DET_AR_RELEASE_VERSION_MINOR!"
+#if(SERVICEDET_AR_RELEASE_VERSION_MINOR != STD_AR_RELEASE_VERSION_MINOR)
+   #error "Incompatible SERVICEDET_AR_RELEASE_VERSION_MINOR!"
 #endif
 
 /******************************************************************************/
@@ -34,7 +34,7 @@
 /******************************************************************************/
 /* CONSTS                                                                     */
 /******************************************************************************/
-CONSTP2VAR(infServiceDetClient,  DET_VAR, DET_CONST) gptrServiceDet               = &ServiceDet;
+CONSTP2VAR(infServiceDetClient,  SERVICEDET_VAR, SERVICEDET_CONST) gptrServiceDet               = &ServiceDet;
 
 /******************************************************************************/
 /* PARAMS                                                                     */
@@ -43,14 +43,14 @@ CONSTP2VAR(infServiceDetClient,  DET_VAR, DET_CONST) gptrServiceDet             
 /******************************************************************************/
 /* OBJECTS                                                                    */
 /******************************************************************************/
-VAR(module_ServiceDet, DET_VAR) ServiceDet;
+VAR(module_ServiceDet, SERVICEDET_VAR) ServiceDet;
 
 /******************************************************************************/
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
-FUNC(void, DET_CODE) module_ServiceDet::InitFunction(
-      CONSTP2CONST(ConstModule_TypeAbstract, DET_CONST,       DET_APPL_CONST) lptrConstModule
-   ,  CONSTP2CONST(CfgModule_TypeAbstract,   DET_CONFIG_DATA, DET_APPL_CONST) lptrCfgModule
+FUNC(void, SERVICEDET_CODE) module_ServiceDet::InitFunction(
+      CONSTP2CONST(ConstModule_TypeAbstract, SERVICEDET_CONST,       SERVICEDET_APPL_CONST) lptrConstModule
+   ,  CONSTP2CONST(CfgModule_TypeAbstract,   SERVICEDET_CONFIG_DATA, SERVICEDET_APPL_CONST) lptrCfgModule
 ){
 #if(STD_ON == ServiceDet_InitCheck)
    if(
@@ -84,14 +84,14 @@ FUNC(void, DET_CODE) module_ServiceDet::InitFunction(
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  DET_E_UNINIT
+         ,  SERVICEDET_E_UNINIT
       );
 #endif
    }
 #endif
 }
 
-FUNC(void, DET_CODE) module_ServiceDet::DeInitFunction(
+FUNC(void, SERVICEDET_CODE) module_ServiceDet::DeInitFunction(
    void
 ){
 #if(STD_ON == ServiceDet_InitCheck)
@@ -109,14 +109,14 @@ FUNC(void, DET_CODE) module_ServiceDet::DeInitFunction(
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  DET_E_UNINIT
+         ,  SERVICEDET_E_UNINIT
       );
 #endif
    }
 #endif
 }
 
-FUNC(void, DET_CODE) module_ServiceDet::MainFunction(
+FUNC(void, SERVICEDET_CODE) module_ServiceDet::MainFunction(
    void
 ){
 #if(STD_ON == ServiceDet_InitCheck)
@@ -133,7 +133,7 @@ FUNC(void, DET_CODE) module_ServiceDet::MainFunction(
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  DET_E_UNINIT
+         ,  SERVICEDET_E_UNINIT
       );
 #endif
    }
@@ -146,7 +146,7 @@ using namespace std;
 #else
 #endif
 
-FUNC(Std_TypeReturn, DET_CODE) module_ServiceDet::ReportError(
+FUNC(Std_TypeReturn, SERVICEDET_CODE) module_ServiceDet::ReportError(
       uint16 IdModule
    ,  uint8  IdInstance
    ,  uint8  IdApi
@@ -173,7 +173,7 @@ void ServiceDet_ReportTransientFault(
 ){
 }
 
-FUNC(void, DET_CODE) module_ServiceDet::Start(
+FUNC(void, SERVICEDET_CODE) module_ServiceDet::Start(
    void
 ){
 }

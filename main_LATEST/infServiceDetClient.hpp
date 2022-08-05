@@ -26,7 +26,7 @@ class infServiceDetClient{
 /******************************************************************************/
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
-      virtual FUNC(Std_TypeReturn, DET_CODE) ReportError(
+      virtual FUNC(Std_TypeReturn, SERVICEDET_CODE) ReportError(
             uint16 IdModule
          ,  uint8  IdInstance
          ,  uint8  IdApi
@@ -45,7 +45,7 @@ class infServiceDetClient{
 /******************************************************************************/
 /* OBJECTS                                                                    */
 /******************************************************************************/
-extern CONSTP2VAR(infServiceDetClient, DET_VAR, DET_CONST) gptrServiceDet;
+extern CONSTP2VAR(infServiceDetClient, SERVICEDET_VAR, SERVICEDET_CONST) gptrServiceDet;
 
 /******************************************************************************/
 /* EOF                                                                        */

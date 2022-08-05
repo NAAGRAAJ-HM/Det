@@ -12,11 +12,11 @@
 /******************************************************************************/
 /* #DEFINES                                                                   */
 /******************************************************************************/
-#define DET_CORE_FUNCTIONALITIES                                               \
-              FUNC(void, DET_CODE) Start(void);                                \
+#define SERVICEDET_CORE_FUNCTIONALITIES                                               \
+              FUNC(void, SERVICEDET_CODE) Start(void);                                \
 
-#define DET_CORE_FUNCTIONALITIES_VIRTUAL                                       \
-      virtual FUNC(void, DET_CODE) Start(void) = 0;                            \
+#define SERVICEDET_CORE_FUNCTIONALITIES_VIRTUAL                                       \
+      virtual FUNC(void, SERVICEDET_CODE) Start(void) = 0;                            \
 
 /******************************************************************************/
 /* MACROS                                                                     */
@@ -27,7 +27,7 @@
 /******************************************************************************/
 class class_ServiceDet_Functionality{
    public:
-      DET_CORE_FUNCTIONALITIES_VIRTUAL
+      SERVICEDET_CORE_FUNCTIONALITIES_VIRTUAL
 };
 
 /******************************************************************************/
