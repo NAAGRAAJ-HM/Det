@@ -24,7 +24,7 @@
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
 class module_ServiceDet:
-      INTERFACES_EXMCALPORTED_SERVICEDET
+      INTERFACES_EXPORTED_SERVICEDET
       public abstract_module
    ,  public infServiceDetClient
    ,  public class_ServiceDet_Functionality
