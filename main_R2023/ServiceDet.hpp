@@ -33,14 +33,14 @@ class module_ServiceDet:
 /******************************************************************************/
 /* OBJECTS                                                                    */
 /******************************************************************************/
-      const ConstServiceDet_Type* lptrConst = (ConstServiceDet_Type*)NULL_PTR;
+      const ConstModule_TypeAbstract* lptrNvMBlocksRom = (ConstModule_TypeAbstract*)NULL_PTR;
 
 /******************************************************************************/
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
    public:
       FUNC(void, SERVICEDET_CODE) InitFunction(
-            CONSTP2CONST(ConstModule_TypeAbstract, SERVICEDET_CONST,       SERVICEDET_APPL_CONST) lptrConstModule
+            CONSTP2CONST(ConstModule_TypeAbstract, SERVICEDET_CONST,       SERVICEDET_APPL_CONST) lptrNvMBlocksRomModule
          ,  CONSTP2CONST(CfgModule_TypeAbstract,   SERVICEDET_CONFIG_DATA, SERVICEDET_APPL_CONST) lptrCfgModule
       );
       FUNC(void, SERVICEDET_CODE) DeInitFunction (void);

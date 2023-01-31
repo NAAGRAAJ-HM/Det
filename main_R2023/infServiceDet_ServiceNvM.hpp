@@ -7,11 +7,8 @@
 /******************************************************************************/
 /* #DEFINES                                                                   */
 /******************************************************************************/
-#define CONSTSERVICEDET_AR_RELEASE_VERSION_MAJOR                               4
-#define CONSTSERVICEDET_AR_RELEASE_VERSION_MINOR                               3
-
-#define Const_DefaultInit_ConstServiceDet                                                                              \
-   ,  {CONSTSERVICEDET_AR_RELEASE_VERSION_MAJOR, CONSTSERVICEDET_AR_RELEASE_VERSION_MINOR, 0x00,0xFF,0x01,'0','1','0'} \
+#define NvM_InitBlocksRom_ServiceDet                                                                         \
+   ,  {SERVICEDET_AR_RELEASE_VERSION_MAJOR, SERVICEDET_AR_RELEASE_VERSION_MINOR, 0x00,0xFF,0x01,'0','1','0'} \
 
 /******************************************************************************/
 /* EOF                                                                        */
