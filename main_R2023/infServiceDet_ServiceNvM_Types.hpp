@@ -10,9 +10,11 @@
 class NvM_BlocksRom_ServiceDet_Type:
       public ConstModule_TypeAbstract
 {
-/******************************************************************************/
-/* CONSTS                                                                     */
-/******************************************************************************/
+};
+
+class NvM_BlocksNv_ServiceDet_Type:
+      public CfgModule_TypeAbstract
+{
 };
 
 /******************************************************************************/
