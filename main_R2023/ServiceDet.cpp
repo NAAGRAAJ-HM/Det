@@ -131,12 +131,6 @@ FUNC(void, SERVICEDET_CODE) module_ServiceDet::MainFunction(
 #endif
 }
 
-#if(STD_ON == _ReSIM)
-#include <iostream>
-using namespace std;
-#else
-#endif
-
 FUNC(Std_TypeReturn, SERVICEDET_CODE) module_ServiceDet::ReportError(
       uint16 IdModule
    ,  uint8  IdInstance
