@@ -1,13 +1,13 @@
 #pragma once
 /******************************************************************************/
-/* File   : infServiceDet_ServiceSwcEcuM.hpp                                  */
+/* File   : infServiceSwcDetServiceSwcEcuM.hpp                                */
 /* Author : NAGARAJA HM (c) since 1982. All rights reserved.                  */
 /******************************************************************************/
 
 /******************************************************************************/
 /* #INCLUDES                                                                  */
 /******************************************************************************/
-#include "CompilerCfg_ServiceDet.hpp"
+#include "CompilerCfg_ServiceSwcDet.hpp"
 
 /******************************************************************************/
 /* #DEFINES                                                                   */
@@ -24,8 +24,8 @@
 /******************************************************************************/
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
-extern FUNC(void, SERVICEDET_CODE) ServiceDet_InitFunction   (void);
-extern FUNC(void, SERVICEDET_CODE) ServiceDet_DeInitFunction (void);
+extern FUNC(void, SERVICESWCDET_CODE) infServiceSwcDetServiceSwcEcuM_InitFunction   (void);
+extern FUNC(void, SERVICESWCDET_CODE) infServiceSwcDetServiceSwcEcuM_DeInitFunction (void);
 
 /******************************************************************************/
 /* CONSTS                                                                     */
