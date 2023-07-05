@@ -30,12 +30,14 @@
 /******************************************************************************/
 /* #DEFINES                                                                   */
 /******************************************************************************/
-#define DCM_MODULE_ID                                                       0x35
+#define DCM_MODULE_ID                                                      0x35
 #define DCM_INSTANCE_ID                                                    0x00u
 #define DCM_COPYRXDATA_ID                                                  0x8Du
+#define DCM_COPYTXDATA_ID                                                  0x9Fu
 #define DCM_E_INTERFACE_BUFFER_OVERFLOW                                    0x03u
 #define DCM_E_PARAM_POINTER                                                0x07u
 #define DCM_E_DCMRXPDUID_RANGE_EXCEED                                      0x20u
+#define DCM_E_DCMTXPDUID_RANGE_EXCEED                                      0x21u
 
 /******************************************************************************/
 /* MACROS                                                                     */
