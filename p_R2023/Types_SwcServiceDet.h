@@ -1,6 +1,6 @@
 #pragma once
 /******************************************************************************/
-/* File   : infSwcServiceDetSwcServiceDcm.h                                   */
+/* File   : Types_SwcServiceDet.h                                             */
 /*                                                                            */
 /* Author : Raajnaag HULIYAPURADA MATA                                        */
 /*                                                                            */
@@ -24,20 +24,10 @@
 /******************************************************************************/
 /* #INCLUDES                                                                  */
 /******************************************************************************/
-#include "CompilerCfg_SwcServiceDet.h"
-
-#include "Types_SwcServiceDet.h"
 
 /******************************************************************************/
 /* #DEFINES                                                                   */
 /******************************************************************************/
-#define DCM_INSTANCE_ID                                                    0x00u
-#define DCM_COPYRXDATA_ID                                                  0x8Du
-#define DCM_COPYTXDATA_ID                                                  0x9Fu
-#define DCM_E_INTERFACE_BUFFER_OVERFLOW                                    0x03u
-#define DCM_E_PARAM_POINTER                                                0x07u
-#define DCM_E_DCMRXPDUID_RANGE_EXCEED                                      0x20u
-#define DCM_E_DCMTXPDUID_RANGE_EXCEED                                      0x21u
 
 /******************************************************************************/
 /* MACROS                                                                     */
@@ -46,6 +36,10 @@
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
+typedef enum{
+      SwcServiceDet_eIdModuleSwcServiceDcm     = 0x35
+   ,  SwcServiceDet_eIdModuleSwcServiceStartUp = 0 //TBD
+}Type_SwcServiceDet_eIdModule;
 
 /******************************************************************************/
 /* CONSTS                                                                     */
@@ -62,12 +56,6 @@
 /******************************************************************************/
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
-extern FUNC(Std_ReturnType, SWCSERVICEDET_CODE) SwcServiceDet_tReportError(
-      Type_SwcServiceDet_eIdModule leIdModule
-   ,  uint8                        u8IdInstance
-   ,  uint8                        leIdApi
-   ,  uint8                        leIdError
-);
 
 /******************************************************************************/
 /* EOF                                                                        */

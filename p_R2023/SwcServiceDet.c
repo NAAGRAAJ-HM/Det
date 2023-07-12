@@ -26,6 +26,7 @@
 #include "Std_Types.h"
 
 #include "infSwcServiceDetSwcServiceDcm.h"
+#include "infSwcServiceDetSwcServiceStartUp.h"
 
 /******************************************************************************/
 /* #DEFINES                                                                   */
@@ -54,16 +55,16 @@
 /******************************************************************************/
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
-Std_ReturnType Det_ReportError(
-      uint16 ModuleId
-   ,  uint8  InstanceId
-   ,  uint8  ApiId
-   ,  uint8  ErrorId
+FUNC(Std_ReturnType, SWCSERVICEDET_CODE) SwcServiceDet_tReportError(
+      Type_SwcServiceDet_eIdModule leIdModule
+   ,  uint8                        u8IdInstance
+   ,  uint8                        leIdApi
+   ,  uint8                        leIdError
 ){
-   UNUSED(ModuleId);
-   UNUSED(InstanceId);
-   UNUSED(ApiId);
-   UNUSED(ErrorId);
+   UNUSED(leIdModule);
+   UNUSED(u8IdInstance);
+   UNUSED(leIdApi);
+   UNUSED(leIdError);
 
    return E_OK;
 }
