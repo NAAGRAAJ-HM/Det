@@ -8,7 +8,7 @@ extern "C"
 #include "Std_Types.hpp"
 #include "CfgSwcServiceDet.hpp"
 
-#define DET_VENDOR_ID         (30u)
+#define DET_VENDOR_ID         (1u)
 #define DET_MODULE_ID         (15u)
 
 #if !defined (DET_AR_MAJOR_VERSION)
